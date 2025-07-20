@@ -1,0 +1,477 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #0056b3; /* Biru Tua */
+    --secondary-color: #007bff; /* Biru Cerah */
+    --accent-color: #28a745; /* Hijau untuk WhatsApp */
+    --dark-color: #333;
+    --light-color: #fff;
+    --grey-color: #f4f4f4;
+    --box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--dark-color);
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1.2rem 3rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+}
+
+.btn-cta:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* --- Header --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    color: var(--dark-color);
+    margin: 0 1.5rem;
+    font-weight: 500;
+}
+
+header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+.btn-cta-nav {
+    background: var(--primary-color);
+    color: var(--light-color) !important;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+}
+.btn-cta-nav:hover {
+    background: var(--secondary-color);
+    color: var(--light-color) !important;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    position: relative;
+    color: var(--light-color);
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+
+/* --- Layanan Section --- */
+.layanan {
+    padding: 8rem 0;
+    background: var(--grey-color);
+}
+
+.layanan .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+}
+
+.layanan .box {
+    background: var(--light-color);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.layanan .box:hover {
+    transform: translateY(-10px);
+}
+
+.layanan .box i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.layanan .box h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.layanan .box p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* --- Konsultasi Section --- */
+.konsultasi {
+    padding: 8rem 0;
+    background: var(--light-color);
+}
+
+.konsultasi .container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.konsultasi .image {
+    flex: 1 1 40rem;
+}
+
+.konsultasi .image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.konsultasi .content {
+    flex: 1 1 50rem;
+}
+
+.konsultasi .content h2 {
+    font-size: 3.5rem;
+    color: var(--dark-color);
+}
+
+.konsultasi .content p {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+/* --- Cara Order Section --- */
+.order {
+    padding: 8rem 0;
+    background: var(--grey-color);
+}
+
+.order .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.order .step {
+    text-align: center;
+    padding: 2rem;
+}
+
+.order .step .icon-wrapper {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--light-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem auto;
+}
+
+.order .step .step-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.order .step h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin: 1.5rem 0 1rem 0;
+}
+
+.order .step p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Tentang Saya Section --- */
+.tentang {
+    padding: 8rem 0;
+    text-align: center;
+    background: var(--light-color);
+}
+
+.tentang .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 5px solid var(--primary-color);
+}
+
+.tentang h3 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.tentang p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.tentang .btn-social {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: #E1306C; /* Instagram Color */
+    color: var(--light-color);
+    font-size: 1.7rem;
+    border-radius: 50px;
+}
+.tentang .btn-social i {
+    margin-right: 1rem;
+}
+
+/* --- FAQ Section --- */
+.faq {
+    padding: 8rem 0;
+    background: var(--grey-color);
+}
+
+.faq .faq-item {
+    background: var(--light-color);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.faq .faq-question {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.faq .faq-answer {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.8;
+    padding-top: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+footer .social-links a {
+    color: var(--light-color);
+    font-size: 2.2rem;
+    margin-left: 1.5rem;
+}
+
+footer .social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Floating WhatsApp Button --- */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    background: var(--accent-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.whatsapp-floating:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header .container {
+        padding: 1.5rem 2rem;
+    }
+    .konsultasi .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -110%;
+        width: 100%;
+        background: var(--light-color);
+        box-shadow: var(--box-shadow);
+        border-top: .1rem solid rgba(0,0,0,.1);
+    }
+    header .navbar.active {
+        left: 0;
+    }
+
+    header .navbar a {
+        display: block;
+        margin: 2rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .hero p {
+        font-size: 1.8rem;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
